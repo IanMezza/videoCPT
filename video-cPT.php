@@ -2,10 +2,10 @@
 
 /*
 Plugin Name: Video CPT
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
+Plugin URI: https://github.com/IanMezza/videoCPT
+Description: Simple Wordpress Custom Post Type is a very simple CPT plugin to post youtube embebed videos in a Wordpress page.
 Version: 1.0
-Author: ianmeza
-Author URI: http://URI_Of_The_Plugin_Author
+Author: Ian Meza
+Author URI: https://github.com/IanMezza
 License: A "Slug" license name e.g. GPL2
 */
