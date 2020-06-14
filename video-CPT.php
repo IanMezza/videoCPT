@@ -9,4 +9,34 @@ Author: Ian Meza
 Author URI: https://github.com/IanMezza
 License: A "Slug" license name e.g. GPL2
 */
-add_action();
+
+function create_Youtube_CPT() {
+	register_post_type('yvideo',
+		array(
+			'labels' => array(
+				'name' => __('Youtube Videos'),
+				'singular_name' => __('Youtube Video'),
+				'add_new' => _x('Agregar Nuevo', 'video'),
+				'add_new_item' => __('Agregar un Video'),
+				'edit_item' => __('Editar Video'),
+				'new_item' => __('Nuevo Video'),
+				'all_items' => __('Todos los Videos'),
+				'view_item' => __('Ver Video'),
+				'search_items' => __('Buscar Video'),
+				'not_found' =>  __('Videos no encontrados'),
+				'not_found_in_trash' => __('No hay Videos en la Papelera'),
+			),
+			'pubic' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'yvideos'),
+			'show_ui' => true,
+			'show_in_rest' => true,
+			'show_in_menu' => true,
+			'menu_icon' => 'dashicons-video-alt3',
+			'capability_type' => 'post',
+			'supports' => array( 'title', 'excerpt', 'custom-fields' )
+		)
+	);
+
+}
+add_action('init', 'create_Youtube_CPT');
