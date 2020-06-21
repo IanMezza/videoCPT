@@ -11,7 +11,7 @@ License: A "Slug" license name e.g. GPL2
 */
 
 function create_Youtube_CPT() {
-	register_post_type('yvideo',
+	register_post_type('youtube_video',
 		array(
 			'labels' => array(
 				'name' => __('Youtube Videos'),
@@ -28,12 +28,13 @@ function create_Youtube_CPT() {
 			),
 			'pubic' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'yvideos'),
+			'rewrite' => array('slug' => 'youtube_videos'),
 			'show_ui' => true,
 			'show_in_rest' => true,
 			'show_in_menu' => true,
 			'menu_icon' => 'dashicons-video-alt3',
 			'capability_type' => 'post',
+			'taxonomies'  => array( 'category' ),
 			'supports' => array( 'title', 'excerpt', 'custom-fields' )
 		)
 	);
